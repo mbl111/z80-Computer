@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "hardware.h": "c",
+        "algorithm": "c",
+        "fstream": "c",
+        "iterator": "c",
+        "memory": "c",
+        "ostream": "c",
+        "regex": "c",
+        "sstream": "c",
+        "stdexcept": "c",
+        "streambuf": "c",
+        "string": "c",
+        "utility": "c",
+        "vector": "c",
+        "xiosbase": "c",
+        "xlocale": "c",
+        "xlocbuf": "c",
+        "xlocmon": "c",
+        "xloctime": "c",
+        "xstring": "c",
+        "xtree": "c",
+        "xutility": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
