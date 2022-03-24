@@ -7,8 +7,9 @@
 #define _SD_START_CLOCK __asm out(_PORT_SD_CLOCK), a __endasm;
 #define _SD_ENABLE __asm out(_PORT_SD_ENABLE), a __endasm;
 #define _SD_DISABLE __asm out(_PORT_SD_DISABLE), a __endasm;
-#define _SD_PULLUP __asm in a, (SD_ENABLE_PORT), a __endasm;
-#define _SD_PULLDOWN __asm in a, (SD_DISABLE_PORT), a __endasm;
+
+#define _SD_PULLUP __asm in a, (_PORT_SD_ENABLE)__endasm;
+#define _SD_PULLDOWN __asm in a, (_PORT_SD_DISABLE)__endasm;
 
 void sd_writeByte(byte c);
 byte sd_readByte();

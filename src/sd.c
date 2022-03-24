@@ -13,7 +13,6 @@ int sd_init()
 {
     _sd_init_seq();
     byte result = sd_sendCMD0();
-    _sd_waitForIdle();
 }
 void _sd_init_seq()
 {
@@ -25,9 +24,15 @@ void _sd_init_seq()
     {
         // Send FF
         sd_writeByte(0xFF);
+        while (PORT_SD_CLOCK)
+            ;
     }
 
     _SD_ENABLE
     sd_writeByte(0xFF);
+    while (PORT_SD_CLOCK)
+        ;
 }
-void _sd_waitForIdle() {}
+// void _sd_waitForIdle() {
+
+// }
